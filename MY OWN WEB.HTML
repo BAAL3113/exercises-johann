@@ -17,10 +17,11 @@
         }
         
         .cuerpo {
-            background-color: indigo;
+            background-color: gray;
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 50px);
+            grid-template-rows: repeat(5, 60px);
+            text-align: center;
         }
         
         #seccion1 {
@@ -31,6 +32,10 @@
         #seccion2 {
             background-color: royalblue;
             grid-area: 1/2/6/6;
+        }
+        
+        #wrapper {
+            background-image: url(https://i.pinimg.com/originals/f4/40/fb/f440fb8d6bf8c17e92e87f10783755d5.jpg);
         }
     </style>
     <main>
@@ -46,10 +51,14 @@
                     <p>
                         <em>text in here</em></p>
                 </section>
+                <br>
                 <section>
                     <p>text in here</p>
                 </section>
             </article>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/originals/f4/40/fb/f440fb8d6bf8c17e92e87f10783755d5.jpg">
         </div>
     </main>
     <script src="#" async defer></script>
