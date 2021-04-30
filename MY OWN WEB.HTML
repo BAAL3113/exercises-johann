@@ -12,24 +12,45 @@
 
 <body>
     <style>
-
+        header {
+            background: green;
+        }
+        
+        .cuerpo {
+            background-color: indigo;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        
+        #seccion1 {
+            background-color: red;
+            grid-area: 1/1/4;
+        }
+        
+        #seccion2 {
+            background-color: royalblue;
+            grid-area: 1/2/4/4;
+        }
     </style>
     <main>
         <header>
             <h1>
                 <b>HELLO WORLD</b></h1>
         </header>
-        <aside>
-            <b>text in here</b></aside>
-        <article>
-            <section>
-                <p>
-                    <em>text in here</em></p>
-            </section>
-            <section>
-                <p>text in here</p>
-            </section>
-        </article>
+        <div class="cuerpo">
+            <aside id="seccion1">
+                <b>text in here</b></aside>
+            <article id="seccion2">
+                <section>
+                    <p>
+                        <em>text in here</em></p>
+                </section>
+                <section>
+                    <p>text in here</p>
+                </section>
+            </article>
+        </div>
     </main>
     <script src="#" async defer></script>
 </body>
