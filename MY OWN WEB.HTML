@@ -23,15 +23,20 @@
         
         .cuerpo {
             background-color: gray;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 150px);
+            display: flex;
+            flex-grow: 4;
+            grid-template-columns: 40px, 50px, auto, 50px, 50px;
+            grid-template-rows: 25% 100px auto;
             text-align: center;
         }
         
         #seccion1 {
+            flex-shrink: 2;
             background-color: rgb(168, 85, 85);
-            grid-area: 1/1/6/2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
             color: honeydew;
             font-family: 'Zen Dots', cursive;
             font-size: 20px;
@@ -39,7 +44,7 @@
         
         #seccion2 {
             background-color: rgb(95, 115, 175);
-            grid-area: 1/2/6/6;
+            ;
             color: honeydew;
             font-family: 'Zen Dots', cursive;
             font-size: 20px;
@@ -47,8 +52,8 @@
         
         .cuerpo2 {
             background-color: black;
-            display: grid;
-            grid-template-columns: 50px, 50px, 50px, 50px;
+            display: flex;
+            grid-template-columns: repeat(4, 150px);
             grid-template-rows: repeat(4, 150px);
             text-align: center;
         }
