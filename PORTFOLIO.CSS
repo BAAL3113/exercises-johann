@@ -141,3 +141,10 @@ section .section-title {
 #profile-link {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .backside .project-tile .card-body img {
+        width: 80px;
+        height: 80px;
+    }
+}
