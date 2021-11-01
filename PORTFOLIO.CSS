@@ -144,8 +144,8 @@ section .section-title {
 
 @media (max-width: 991px) {
     .backside .project-tile .card-body {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         background-color: #007b5e;
     }
 }
