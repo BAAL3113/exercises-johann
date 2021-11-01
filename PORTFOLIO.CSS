@@ -67,7 +67,7 @@ section .section-title {
 }
 
 .frontside {
-    position: absolute;
+    position: relative;
     transform: rotateY(0deg);
     transform: rotateY(0deg);
     z-index: 2;
