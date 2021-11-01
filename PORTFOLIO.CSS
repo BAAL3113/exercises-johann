@@ -142,7 +142,7 @@ section .section-title {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .frontside .backside .project-tile .card-body img {
         width: 80px;
         height: 80px;
