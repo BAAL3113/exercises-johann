@@ -143,9 +143,9 @@ section .section-title {
 }
 
 @media (min-width: 768px) {
-    .backside .project-tile .card-body img {
-        width: 8px;
-        height: 8px;
+    .backside .project-tile .card-body {
+        width: 80px;
+        height: 80px;
         background-color: darkolivegreen;
     }
 }
