@@ -146,6 +146,6 @@ section .section-title {
     .backside .project-tile .card-body img {
         width: 80px;
         height: 80px;
-        color: darkolivegreen;
+        background-color: darkolivegreen;
     }
 }
