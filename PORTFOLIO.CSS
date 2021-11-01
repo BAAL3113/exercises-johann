@@ -143,9 +143,9 @@ section .section-title {
 }
 
 @media (max-width: 991px) {
-    .backside .project-tile .card-body .frontside {
+    .backside .project-tile .card-body {
         width: 300px;
         height: 300px;
-        background-color: #007b5e;
+        /*background-color: #007b5e;*/
     }
 }
