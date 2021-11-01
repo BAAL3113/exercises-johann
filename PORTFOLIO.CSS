@@ -142,9 +142,10 @@ section .section-title {
     text-decoration: underline;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .frontside .backside .project-tile .card-body img {
         width: 80px;
         height: 80px;
+        background-color: #007b5e;
     }
 }
