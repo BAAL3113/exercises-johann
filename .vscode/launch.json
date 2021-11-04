@@ -4,11 +4,21 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+
+    {
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/app.js",
+        "request": "launch",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "pwa-node"
+    },
         {
             "type": "pwa-msedge",
             "request": "launch",
-            "name": "Open SIDEBAR.HTML",
-            "file": "c:\\Users\\JOHANN\\Documents\\GitHub\\exercises-johann\\SIDEBAR.HTML"
-        }
+            "name": "Open PORTFOLIO.HTML",
+            "file":"c:\\Users\\JOHANN\\Documents\\GitHub\\exercises-johann\\PORTFOLIO.HTML" }
     ]
 }
