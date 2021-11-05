@@ -112,7 +112,7 @@ section .section-title {
     min-height: 312px;
 }
 
-.backside .project-tile a {
+.backside .project-tile a .script {
     font-size: 18px;
     color: #007b5e !important;
 }
