@@ -18,5 +18,19 @@ else{
     document.write("you are not married <br/>");
 
 }
+document.write("My name is Johann".length+"<br/>");
+document.write("My name is Johann".toUpperCase()+"<br/>");
+age++;
+document.write(age+"<br/>");
+let age2=19;
+document.write(age2+"<br/>");
+let diference=age-age2;
+document.write(diference+"<br/>");
+document.write(name2[0]+"<br/>");
+let Array2=[3,2,1];
+document.write(Array2[0]+"<br/>");
+let SecondDigit2=Array2[1];
+document.write(SecondDigit2+"<br/>");
+
 
 
