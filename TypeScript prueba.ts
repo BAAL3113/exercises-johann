@@ -31,6 +31,34 @@ let Array2=[3,2,1];
 document.write(Array2[0]+"<br/>");
 let SecondDigit2=Array2[1];
 document.write(SecondDigit2+"<br/>");
+Array2.push(4);
+document.write(Array2+"<br/>");
+const oneDown2=Array2.pop();
+document.write(oneDown2+"<br/>");
+document.write(Array2+"<br/>");
+const firstDown2=Array2.shift();
+document.write(firstDown2+"<br/>");
+document.write(Array2+"<br/>");
+const firstInsert2=Array2.unshift(1);
+document.write(firstInsert2+"<br/>");
+document.write(Array2+"<br/>");
+Array2.unshift(6,6,6);
+document.write(Array2+"<br/>");
+function sentence2(){
+    document.write("Hello World <br/>");
+}
+sentence2();
+function expression2(name){
+    document.write("Hello "+name+"<br/>");
+}
+expression2("Johann");
+function sum2(num){
+    return num+1;
+}
+document.write(sum2(4)+"<br/>");
+
+
+
 
 
 
