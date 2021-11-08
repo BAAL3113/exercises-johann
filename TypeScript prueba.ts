@@ -56,9 +56,3 @@ function sum2(num){
     return num+1;
 }
 document.write(sum2(4)+"<br/>");
-
-
-
-
-
-
