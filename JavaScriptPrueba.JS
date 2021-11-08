@@ -53,3 +53,6 @@ function sum(num) {
     return num + 6;
 }
 document.write(sum(4) + '<br/>');
+// Global variable
+global = 5;
+document.write(global + '<br/>');
