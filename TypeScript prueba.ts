@@ -1,3 +1,4 @@
+document.write("This is TypeScript <br/>");
 var question="what's my name?, " +"Answer me please";
 var answer=" my name is Johann";
 document.write(question,"<br/>");
@@ -56,3 +57,13 @@ function sum2(num){
     return num+1;
 }
 document.write(sum2(4)+"<br/>");
+function nextInLine2(arr2, item2) {
+    // Your code here
+    arr2.push(item2);
+    arr2.shift(item2);
+    return item2;
+}
+const testArr2 = [1, 2, 3, 4, 5];
+document.write("Before: " + JSON.stringify(testArr2) + '<br/>');
+document.write(nextInLine(testArr2, 6) + '<br/>');
+document.write("After: " + JSON.stringify(testArr2) + '<br/>');
