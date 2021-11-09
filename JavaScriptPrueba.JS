@@ -1,3 +1,4 @@
+document.write("This is Javascript <br/>");
 var question = "Question, " + "Answer me please!";
 var answer = "Answer";
 var correct = "Correct";
@@ -56,3 +57,23 @@ document.write(sum(4) + '<br/>');
 // Global variable
 global = 5;
 document.write(global + '<br/>');
+
+function nextInLine(arr, item) {
+    // Your code here
+    arr.push(item);
+    return arr.shift(item);
+}
+const testArr = [1, 2, 3, 4, 5];
+document.write("Before: " + JSON.stringify(testArr) + '<br/>');
+document.write(nextInLine(testArr, 6) + '<br/>');
+document.write("After: " + JSON.stringify(testArr) + '<br/>');
+
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue == true) {
+        return document.write("Yes, that was true <br/>");
+    } else {
+        return document.write("No, that was false <br/>");
+    }
+}
+trueOrFalse(true);
+trueOrFalse(false);
