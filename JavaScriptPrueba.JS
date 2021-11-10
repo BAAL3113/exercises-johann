@@ -77,3 +77,23 @@ function trueOrFalse(wasThatTrue) {
 }
 trueOrFalse(true);
 trueOrFalse(false);
+
+function testEqual(val) {
+    if (val == 12) {
+        return document.write("Equal <br/>");
+    } else {
+        return document.write("Not Equal <br/>");
+    }
+}
+testEqual("12");
+testEqual(12);
+
+function testEqual2(val) {
+    if (val === 12) {
+        return document.write("Equal <br/>");
+    } else {
+        return document.write("Not Equal <br/>");
+    }
+}
+testEqual2("12");
+testEqual2(12);
