@@ -11,7 +11,7 @@ document.write(question, "<br/>", answer, "<br/>", correct, "<br/>", incorrect, 
 let a = 1;
 let b = 2;
 let c = a + b;
-//printing variables
+//printing variables on screen
 document.write(c + "<br/><br/>");
 document.write(question + " Yes of course, tell me.<br/>");
 document.write("Did you take my cellphone? " + answer + "!<br/>");
@@ -121,8 +121,8 @@ function testNotEqual2(val) {
 }
 testNotEqual2(12);
 testNotEqual2("12");
-// el comando or es ||
-// uso de if else if else
+// the command or is ||
+// using if, else if, else
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
 function golfScore(par, strokes) {
@@ -149,8 +149,8 @@ golfScore(4, 3);
 golfScore(4, 4);
 golfScore(1, 1);
 golfScore(5, 5);
-// el comando and es &&
-// uso de switch
+// the command and is &&
+// using switch
 function caseInSwitch(val) {
     let answer = "";
     switch (val) {
@@ -405,3 +405,7 @@ function phoneticLookup(val) {
 }
 phoneticLookup("charlie");
 phoneticLookup("bravo");
+//using hasOwnProperty
+function checkObj(obj, checkProp) {
+    return obj.hasOwnProperty(checkProp);
+}
