@@ -1,12 +1,17 @@
+//document presentation of JavaScript
 document.write("This is Javascript <br/>");
+//declaration of variables with var, assigning text
 var question = "Question, " + "Answer me please!";
 var answer = "Answer";
 var correct = "Correct";
 var incorrect = "Incorrect";
+//printing variables
 document.write(question, "<br/>", answer, "<br/>", correct, "<br/>", incorrect, "<br/>");
+//declaration of variables with let, assigning text
 let a = 1;
 let b = 2;
 let c = a + b;
+//printing variables
 document.write(c + "<br/><br/>");
 document.write(question + " Yes of course, tell me.<br/>");
 document.write("Did you take my cellphone? " + answer + "!<br/>");
@@ -18,6 +23,7 @@ c *= b;
 document.write(c + '<br/>');
 document.write("My name is Johann".length + '<br/>');
 document.write("My name is Johann".toUpperCase() + '<br/>');
+//using arrays
 let Name = "Johann";
 let FirstLetter = "";
 FirstLetter = Name[0];
@@ -39,7 +45,7 @@ document.write(firstInsert + '<br/>');
 document.write(Array + '<br/>');
 Array.unshift(["Johann", "Michele", "Goku"]);
 document.write(Array + '<br/>');
-
+//usings functions
 function sentence() {
     document.write("Hello World! <br/>");
 }
@@ -54,12 +60,10 @@ function sum(num) {
     return num + 6;
 }
 document.write(sum(4) + '<br/>');
-// Global variable
 global = 5;
 document.write(global + '<br/>');
 
 function nextInLine(arr, item) {
-    // Your code here
     arr.push(item);
     return arr.shift(item);
 }
@@ -77,7 +81,7 @@ function trueOrFalse(wasThatTrue) {
 }
 trueOrFalse(true);
 trueOrFalse(false);
-
+//using If Else and equality, diferrence, greater than, less than, greater than or equal to, less than or equal to
 function testEqual(val) {
     if (val == 12) {
         return document.write("Equal <br/>");
@@ -261,7 +265,7 @@ abTest(2, 5);
 abTest(-5, 5);
 abTest(2, -5);
 abTest(-5, -5);
-
+//example of math.round, Math.pow, Math.sqrt
 function abTest2(a, b) {
     if (a < 0 || b < 0) {
         return undefined;
@@ -272,7 +276,7 @@ abTest2(2, 5);
 abTest2(2, 2);
 let count = 0;
 
-function cc(card) {
+function cardTest(card) {
     switch (card) {
         case 2:
         case 3:
@@ -295,16 +299,16 @@ function cc(card) {
         return document.write(count + " No, you lose! <br/>");
     }
 }
-cc(2);
-cc(3);
-cc(7);
-cc(10);
-cc("K");
-cc("A");
-cc("Q");
+cardTest(2);
+cardTest(3);
+cardTest(7);
+cardTest(10);
+cardTest("K");
+cardTest("A");
+cardTest("Q");
 let count2 = 0;
 
-function cc2(card) {
+function cardTest2(card) {
     switch (card) {
         case 2 || 3 || 4 || 5 || 6:
             count++;
@@ -318,18 +322,20 @@ function cc2(card) {
             break;
     }
 }
-cc2(2);
-cc2(3);
-cc2(7);
-cc2(10);
-cc2("K");
-cc2("A");
-cc2("Q");
+cardTest2(2);
+cardTest2(3);
+cardTest2(7);
+cardTest2(10);
+cardTest2("K");
+cardTest2("A");
+cardTest2("Q");
+//example of object
 const testObj = {
     "hat": "ballcap",
     "shirt": "jersey",
     "shoes": "cleats"
 };
+//assigning a value to a variable, using dot notation
 const hatValue = testObj.hat;
 const shirtValue = testObj.shirt;
 const shoesValue = testObj.shoes;
@@ -341,6 +347,7 @@ const testObj2 = {
     "my side": "veggies",
     "the drink": "water"
 };
+//assigning a value to a variable, using bracket notation
 const entreeValue = testObj2["an entree"];
 const drinkValue = testObj2["the drink"];
 document.write(entreeValue + '<br/>');
@@ -382,3 +389,19 @@ property = testObj2.hasOwnProperty("my side");
 document.write(property + '<br/>');
 property = testObj2.hasOwnProperty("an entree");
 document.write(property + '<br/>');
+
+function phoneticLookup(val) {
+    let result = "";
+    const lookup = {
+        alpha: "Adams",
+        bravo: "Boston",
+        charlie: "Chicago",
+        delta: "Denver",
+        echo: "Easy",
+        foxtrot: "Frank"
+    };
+    result = lookup[val];
+    return document.write(result + '<br/>');
+}
+phoneticLookup("charlie");
+phoneticLookup("bravo");
