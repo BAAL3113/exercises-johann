@@ -407,5 +407,163 @@ phoneticLookup("charlie");
 phoneticLookup("bravo");
 //using hasOwnProperty
 function checkObj(obj, checkProp) {
-    return obj.hasOwnProperty(checkProp);
+    if (obj.hasOwnProperty(checkProp)) {
+        return document.write(obj[checkProp] + '<br/>');
+    } else {
+        return document.write("Not Found <br/>");
+    }
+}
+checkObj(testObj3, "face");
+checkObj(phoneticLookup, "charlie");
+checkObj(dogs, "Fido");
+checkObj(dogs, "face");
+//adding properties to an object
+const myMusic = [{
+        "artist": "Billy Joel",
+        "title": "Piano",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
+    },
+    {
+        "artist": "Bruno Mars",
+        "title": "24K Magic",
+        "release_year": 2016,
+        "formats": [
+            "CD",
+            "Digital"
+        ],
+        "gold": true
+    },
+    {
+        "artist": "Bruno Mars",
+        "title": "24K Magic",
+        "release_year": 2016,
+        "formats": [
+            "CD",
+            "Digital"
+        ],
+        "gold": true
+    }
+];
+//accessing nested properties of an object
+const myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }
+};
+
+let gloveBoxContents = undefined;
+gloveBoxContents = myStorage.car.inside["glove box"];
+document.write(gloveBoxContents + '<br/>');
+document.write(myStorage.car.inside["glove box"] + '<br/>');
+document.write(myStorage.car.outside["trunk"] + '<br/>');
+const myPlants = [{
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+];
+
+let secondTree = "";
+secondTree = myPlants[1].list[1];
+document.write(secondTree + '<br/>');
+
+var recordCollection = {
+    2548: {
+        albumTitle: 'Slippery When Wet',
+        artist: 'Bon Jovi',
+        tracks: ['Let It Rock', 'You Give Love a Bad Name']
+    },
+    2468: {
+        albumTitle: '1999',
+        artist: 'Prince',
+        tracks: ['1999', 'Little Red Corvette']
+    },
+    1245: {
+        artist: 'Robert Palmer',
+        tracks: []
+    },
+    5439: {
+        albumTitle: 'ABBA Gold'
+    }
+};
+
+function updateRecords(records, id, prop, value) {
+    if (prop !== "tracks" && value !== "") {
+        records[id][prop] = value;
+    } else if (prop === "tracks" && records[id].hasOwnProperty("tracks") === false) {
+        records[id][prop] = [value];
+    } else if (prop === "tracks" && value !== "") {
+        records[id][prop] = records[id][prop] || [];
+        records[id][prop].push(value);
+    } else if (value === "") {
+        delete records[id][prop];
+    } else {
+        records[id][prop] = value;
+    }
+    return records;
+}
+updateRecords(recordCollection, 5439, "artist", "ABBA");
+updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
+updateRecords(recordCollection, 2548, "tracks", "Addicted to Love");
+updateRecords(recordCollection, 1245, "tracks", "You Give Love a Bad Name");
+document.write(recordCollection[2548]["tracks"] + '<br/>');
+document.write(recordCollection[2548]["artist"] + '<br/>');
+document.write(recordCollection[5439]["tracks"] + '<br/>');
+document.write(recordCollection[5439]["artist"] + '<br/>');
+//using while loop
+const myArray = [];
+let i = 0;
+while (i < 5) {
+    myArray.push(i);
+    document.write(i + '<br/>');
+    i++;
+}
+document.write(myArray + '<br/>');
+//using for loop
+const myArray2 = [];
+for (let i = 0; i < 5; i++) {
+    myArray2.push(i);
+    document.write(i + '<br/>');
+}
+document.write(myArray2 + '<br/>');
+const myArray3 = [];
+for (let i = 1; i <= 9; i += 2) {
+    myArray3.push(i);
+    document.write(i + '<br/>');
+}
+document.write(myArray3 + '<br/>');
+const myArray4 = [];
+for (let i = 9; i >= 1; i -= 2) {
+    myArray4.push(i);
+    document.write(i + '<br/>');
+}
+document.write(myArray4 + '<br/>');
+const myArray5 = [2, 3, 4, 5, 6];
+let total = 0;
+for (let i = 0; i < myArray5.length; i++) {
+    total += myArray5[i];
+    document.write(total + '<br/>');
 }
