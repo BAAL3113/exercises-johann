@@ -567,3 +567,55 @@ for (let i = 0; i < myArray5.length; i++) {
     total += myArray5[i];
     document.write(total + '<br/>');
 }
+//nest "for" loop
+const myArray6 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+let total2 = 0;
+for (let i = 0; i < myArray6.length; i++) {
+    for (let j = 0; j < myArray6[i].length; j++) {
+        total2 += myArray6[i][j];
+        document.write(total2 + '<br/>');
+    }
+}
+
+function multiplyAll(arr) {
+    let product = 1;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+    return document.write(product);
+}
+multiplyAll([
+    [1, 2],
+    [3, 4],
+    [5, 6, 7]
+]);
+//using forEach
+const myArray7 = [1, 2, 3, 4, 5];
+myArray7.forEach(function(item) {
+    document.write(item + '<br/>');
+});
+//Iterate with JavaScript Do...While Loops
+const ourArray = [];
+let i = 0;
+
+do {
+    ourArray.push(i);
+    i++;
+} while (i < 5);
+document.write(ourArray + '<br/>');
+//Iterate with JavaScript While Loops
+const ourArray2 = [];
+let i2 = 0;
+
+
+while (i2 < 5) {
+    ourArray2.push(i2);
+    i2++;
+}
+document.write(ourArray2 + '<br/>');
