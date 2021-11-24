@@ -323,7 +323,7 @@ function rangeOfNumbers(startNum, endNum) {
 rangeOfNumbers(1, 5);
 document.write(rangeOfNumbers(1, 5) + '<br/>');
 rangeOfNumbers(6, 9);
-document.write(rangeOfNumbers(1, -1) + '<br/>');
+document.write(rangeOfNumbers(6, 9) + '<br/>');
 rangeOfNumbers(4, 4);
 document.write(rangeOfNumbers(4, 4) + '<br/>');
 rangeOfNumbers(1, -1);
@@ -342,12 +342,6 @@ fibonacci(5);
 document.write(fibonacci(5) + '<br/>');
 fibonacci(10);
 document.write(fibonacci(10) + '<br/>');
-fibonacci(20);
-document.write(fibonacci(20) + '<br/>');
-fibonacci(50);
-document.write(fibonacci(50) + '<br/>');
-fibonacci(100);
-document.write(fibonacci(100) + '<br/>');
 //Use Recursion to Create a Factorial
 document.write("Use Recursion to Create a Factorial <br/>");
 
@@ -362,28 +356,3 @@ factorial(5);
 document.write(factorial(5) + '<br/>');
 factorial(10);
 document.write(factorial(10) + '<br/>');
-factorial(20);
-document.write(factorial(20) + '<br/>');
-factorial(50);
-document.write(factorial(50) + '<br/>');
-factorial(100);
-document.write(factorial(100) + '<br/>');
-//Use Recursion to Create a Palindrome
-document.write("Use Recursion to Create a Palindrome <br/>");
-
-
-function palindrome(palinstr) {
-    if (palinstr.length <= 1) {
-        return true;
-    }
-    if (palinstr[0] === palinstr[palinstr.length - 1]) {
-        return palindrome(palinstr.slice(1, -1));
-    }
-    return false;
-}
-palindrome("racecar");
-document.write(palindrome("racecar") + '<br/>');
-palindrome("hello");
-document.write(palindrome("hello") + '<br/>');
-palindrome("racecar");
-document.write(palindrome("racecar") + '<br/>');
