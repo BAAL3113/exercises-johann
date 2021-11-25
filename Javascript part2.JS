@@ -13,33 +13,33 @@ document.write(myArray + '<br/>');
 //using for loop I insert five numbers in an array with a counter adding one each time
 document.write("using for loop I insert five numbers in an array with a counter adding one each time <br/>");
 const myArray2 = [];
-for (let i2 = 0; i2 < 5; i2++) {
-    myArray2.push(i2);
-    document.write(i2 + '<br/>');
+for (let i = 0; i < 5; i++) {
+    myArray2.push(i);
+    document.write(i + '<br/>');
 }
 document.write(myArray2 + '<br/>');
 //using for loop I insert values in an array from one to nine, adding two each time
 document.write("using for loop I insert values in an array from one to nine, adding two each time <br/>");
 const myArray3 = [];
-for (let i3 = 1; i3 <= 9; i3 += 2) {
-    myArray3.push(i3);
-    document.write(i3 + '<br/>');
+for (let i = 1; i <= 9; i += 2) {
+    myArray3.push(i);
+    document.write(i + '<br/>');
 }
 document.write(myArray3 + '<br/>');
 //using for loop I insert values in an array from nine to one, subtracting two each time
 document.write("using for loop I insert values in an array from nine to one, subtracting two each time <br/>");
 const myArray4 = [];
-for (let i4 = 9; i4 >= 1; i4 -= 2) {
-    myArray4.push(i4);
-    document.write(i4 + '<br/>');
+for (let i = 9; i >= 1; i -= 2) {
+    myArray4.push(i);
+    document.write(i + '<br/>');
 }
 document.write(myArray4 + '<br/>');
 //using for loop I add all the numbers in an array
 document.write("using for loop I add all the numbers in an array <br/>");
 const myArray5 = [2, 3, 4, 5, 6];
 let total = 0;
-for (let i5 = 0; i5 < myArray5.length; i5++) {
-    total += myArray5[i5];
+for (let i = 0; i < myArray5.length; i++) {
+    total += myArray5[i];
     document.write(total + '<br/>');
 }
 //nest "for" loop
@@ -51,9 +51,9 @@ const myArray6 = [
     [7, 8, 9]
 ];
 let total2 = 0;
-for (let i6 = 0; i6 < myArray6.length; i6++) {
-    for (let j = 0; j < myArray6[i6].length; j++) {
-        total2 += myArray6[i6][j];
+for (let i = 0; i < myArray6.length; i++) {
+    for (let j = 0; j < myArray6[i].length; j++) {
+        total2 += myArray6[i][j];
         document.write(total2 + '<br/>');
     }
 }
@@ -63,9 +63,9 @@ document.write("nest for loop multiplying all the numbers in an array <br/>");
 
 function multiplyAll(multiplyArr) {
     let product = 1;
-    for (let i7 = 0; i7 < multiplyArr.length; i7++) {
-        for (let j2 = 0; j2 < multiplyArr.length; j2++) {
-            product *= multiplyArr[i7][j2];
+    for (let i = 0; i < multiplyArr.length; i++) {
+        for (let j = 0; j < multiplyArr.length; j++) {
+            product *= multiplyArr[i][j];
         }
     }
     return product;
@@ -81,22 +81,22 @@ myArray7.forEach(function(forEachitem) {
 //Iterate with JavaScript Do...While Loops
 document.write("Iterate with JavaScript Do...While Loops <br/>");
 const ourArray = [];
-let i8 = 0;
+let i2 = 0;
 
 do {
-    ourArray.push(i8);
-    i8++;
-} while (i8 < 5);
+    ourArray.push(i2);
+    i2++;
+} while (i2 < 5);
 document.write(ourArray + '<br/>');
 //Iterate with JavaScript While Loops
 document.write("Iterate with JavaScript While Loops <br/>");
 const ourArray2 = [];
-let i9 = 0;
+let i3 = 0;
 
 
-while (i9 < 5) {
-    ourArray2.push(i9);
-    i9++;
+while (i3 < 5) {
+    ourArray2.push(i3);
+    i3++;
 }
 document.write(ourArray2 + '<br/>');
 //Replace Loops with using Recursion
@@ -121,11 +121,11 @@ document.write(multiply(myArray8, 5) + '<br/>');
 document.write("in this function, we are not using Recursion, we are using a loop <br/>");
 
 function multiply2(multarr, multin) {
-    let multiproduct = 1;
-    for (let ia = 0; ia < multin; ia++) {
-        multiproduct *= multarr[ia];
+    let product = 1;
+    for (let i = 0; i < multin; i++) {
+        product *= multarr[i];
     }
-    return multiproduct;
+    return product;
 }
 multiply2(myArray8, 5);
 document.write(myArray8 + '<br/>');
@@ -184,10 +184,10 @@ const contacts = [{
 ];
 
 function lookUpProfile(lookname, lookprop) {
-    for (let ix = 0; ix < contacts.length; ix++) {
-        if (contacts[ix].firstName === lookname) {
-            if (contacts[ix].hasOwnProperty(lookprop)) {
-                return contacts[ix][lookprop];
+    for (let i = 0; i < contacts.length; i++) {
+        if (contacts[i].firstName === lookname) {
+            if (contacts[i].hasOwnProperty(lookprop)) {
+                return contacts[i][lookprop];
             } else {
                 return "No such property";
             }
