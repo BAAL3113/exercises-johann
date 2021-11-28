@@ -334,7 +334,7 @@ document.write("Use Recursion to Create a Fibonacci Sequence <br/>");
 
 function fibonacci(fibn) {
     if (fibn <= 1) {
-        return fibn;
+        return fibn
     }
     return fibonacci(fibn - 1) + fibonacci(fibn - 2);
 }
@@ -342,6 +342,10 @@ fibonacci(5);
 document.write(fibonacci(5) + '<br/>');
 fibonacci(10);
 document.write(fibonacci(10) + '<br/>');
+fibonacci(15);
+document.write(fibonacci(15) + '<br/>');
+fibonacci(20);
+document.write(fibonacci(20) + '<br/>');
 //Use Recursion to Create a Factorial
 document.write("Use Recursion to Create a Factorial <br/>");
 
@@ -354,5 +358,103 @@ function factorial(factn) {
 }
 factorial(5);
 document.write(factorial(5) + '<br/>');
-factorial(10);
-document.write(factorial(10) + '<br/>');
+//Prevent Object Mutation
+document.write("Prevent Object Mutation <br/>");
+
+
+function freezeObj() {
+    "use strict";
+    const MATH_CONSTANTS = {
+        PI: 3.14
+    };
+    // change code below this line
+    Object.freeze(MATH_CONSTANTS);
+    // change code above this line
+    try {
+        MATH_CONSTANTS.PI = 99;
+    } catch (ex) {
+        return ex;
+    }
+}
+freezeObj();
+document.write(freezeObj() + '<br/>');
+//Use Arrow Functions to Write Concise Anonymous Functions
+document.write("Use Arrow Functions to Write Concise Anonymous Functions <br/>");
+
+const myFunc = () => {
+    const myVar = "value";
+    return myVar;
+}
+myFunc();
+document.write(myFunc() + '<br/>');
+
+
+const myFunc2 = () => "value";
+myFunc2();
+document.write(myFunc2() + '<br/>');
+
+
+const magic = () => {
+    return new Date();
+};
+magic();
+document.write(magic() + '<br/>');
+
+
+const myConcat = (arr1, arr2) => {
+    "use strict";
+    return arr1.concat(arr2);
+}
+myConcat([1, 2], [3, 4, 5]);
+document.write(myConcat([1, 2], [3, 4, 5]) + '<br/>');
+
+//Set Default Parameters for Your Functions
+document.write("Set Default Parameters for Your Functions <br/>");
+
+
+const greeting = (name = "Anonymous") => "Hello " + name;
+greeting();
+document.write(greeting() + '<br/>');
+greeting("John");
+document.write(greeting("John") + '<br/>');
+
+
+/*const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (squarearr) => {
+    "use strict";
+    // change code below this line
+    const squaredIntegers = squarearr.filter(num => Number.isInteger(num) && num > 0).map(num => num * num);
+    // change code above this line
+    return squaredIntegers;
+}
+SquareList(realNumberArray);
+document.write(SquareList(realNumberArray) + '<br/>');*/
+
+
+const increment = (number, value = 1) => number + value;
+increment(5, 2);
+document.write(increment(5, 2) + '<br/>');
+increment(5);
+document.write(increment(5) + '<br/>');
+//Use the Rest Parameter with Function Parameters
+document.write("Use the Rest Parameter with Function Parameters <br/>");
+
+
+const sum2 = (function() {
+    "use strict";
+    return function sum2(...args) {
+        return args.reduce((a, b) => a + b, 0);
+    };
+})();
+sum2(1, 2, 3);
+document.write(sum2(1, 2, 3) + '<br/>');
+sum2(1, 2, 3, 4);
+document.write(sum2(1, 2, 3, 4) + '<br/>');
+
+const sum3 = (...args) => {
+    return args.reduce((a, b) => a + b, 0);
+}
+sum3(1, 2, 3);
+document.write(sum3(1, 2, 3) + '<br/>');
+sum3(1, 2, 3, 4);
+document.write(sum3(1, 2, 3, 4) + '<br/>');
