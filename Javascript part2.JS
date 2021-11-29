@@ -458,3 +458,185 @@ sum3(1, 2, 3);
 document.write(sum3(1, 2, 3) + '<br/>');
 sum3(1, 2, 3, 4);
 document.write(sum3(1, 2, 3, 4) + '<br/>');
+//Use the Spread Operator to Evaluate Arrays In-Place
+document.write("Use the Spread Operator to Evaluate Arrays In-Place <br/>");
+
+
+const arr3 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+const arr4 = [...arr3];
+arr4;
+document.write(arr4 + '<br/>');
+arr3;
+document.write(arr3 + '<br/>');
+
+//Use the Spread Operator to Evaluate Arrays In-Place and using Math.Max
+document.write("Use the Spread Operator to Evaluate Arrays In-Place and using Math.Max <br/>");
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr);
+document.write(maximus + '<br/>');
+//Use Destructuring Assignment to Extract Values from Objects
+document.write("Use Destructuring Assignment to Extract Values from Objects <br/>");
+
+
+const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80
+};
+
+
+function getTempOfTmrw(tempObj) {
+    "use strict";
+    // change code below this line
+    const {
+        tomorrow: tempOfTomorrow
+    } = tempObj;
+    // change code above this line
+    return tempOfTomorrow;
+}
+getTempOfTmrw(HIGH_TEMPERATURES);
+document.write(getTempOfTmrw(HIGH_TEMPERATURES) + '<br/>');
+//Use Destructuring Assignment to Assign Variables from Objects
+document.write("Use Destructuring Assignment to Assign Variables from Objects <br/>");
+
+
+const LOCAL_FORECAST = {
+    yesterday: {
+        low: 61,
+        high: 75
+    },
+    today: {
+        low: 64,
+        high: 77
+    },
+    tomorrow: {
+        low: 68,
+        high: 80
+    }
+};
+
+
+function getMaxOfTmrw(forecast) {
+    "use strict";
+    // change code below this line
+    const {
+        tomorrow: {
+            high: maxOfTomorrow
+        }
+    } = forecast;
+    // change code above this line
+    return maxOfTomorrow;
+}
+getMaxOfTmrw(LOCAL_FORECAST);
+document.write(getMaxOfTmrw(LOCAL_FORECAST) + '<br/>');
+//Use Destructuring Assignment to Assign Variables from Nested Objects
+document.write("Use Destructuring Assignment to Assign Variables from Nested Objects <br/>");
+
+
+const ANCESTRY_FILE = [{
+        name: "Carolus Haverbeke", //name: "Carolus Haverbeke",
+
+
+        ancestors: [{
+            name: "Maria van Brussel1", //name: "Maria van Brussel",
+
+            ancestors: [{
+                name: "Gustavus Adamus1" //name: "Gustavus Adamus"
+            }]
+        }]
+    },
+    {
+        name: "Emma de Milliano", //name: "Emma de Milliano",
+
+        ancestors: [{
+                name: "Petrus de Milliano", //name: "Petrus de Milliano",
+
+                ancestors: [{
+                    name: "Pieter de Decker" //name: "Pieter de Decker"
+                }]
+            },
+            {
+                name: "Maria van Brussel2", //name: "Maria van Brussel",
+
+                ancestors: [{
+                    name: "Gustavus Adamus2" //name: "Gustavus Adamus"
+                }]
+            }
+        ]
+    },
+    {
+        name: "Father Adam", //name: "Father Adam",
+
+        ancestors: [{
+            name: "Gustavus Adamus3" //name: "Gustavus Adamus"
+        }]
+    }
+];
+
+
+function getAncestors(person, callback) {
+    "use strict";
+    let ancestors = [];
+    const {
+        ancestors: [{
+            ancestors: [{
+                name
+            }]
+        }]
+    } = person;
+    ancestors.push(name);
+    callback(ancestors);
+}
+getAncestors(ANCESTRY_FILE[0], (ancestors) => {
+    document.write(ancestors + '<br/>');
+});
+getAncestors(ANCESTRY_FILE[1], (ancestors) => {
+    document.write(ancestors + '<br/>');
+});
+//this is an error because the callback function is not defined ANCESTRY_FILE[2] does not have a callback function defined because it doens't have second ancestors
+/*getAncestors(ANCESTRY_FILE[2], (ancestors) => {
+        document.write(ancestors + '<br/>');
+    });*/
+
+
+//Use Destructuring Assignment to Assign Variables from Arrays
+document.write("Use Destructuring Assignment to Assign Variables from Arrays <br/>");
+
+
+const input = [1, 2];
+const [first, second] = input;
+first;
+document.write(first + '<br/>');
+second;
+document.write(second + '<br/>');
+//Use Destructuring Assignment to Assign Variables from Nested Arrays
+document.write("Use Destructuring Assignment to Assign Variables from Nested Arrays <br/>");
+
+
+const list = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+];
+const [a, [b, c]] = list;
+a;
+document.write(a + '<br/>');
+b;
+document.write(b + '<br/>');
+c;
+document.write(c + '<br/>');
+//Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+document.write("Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements <br/>");
+
+
+const [a1, b1, c1, d1, e1] = [1, 2, 3, 4, 5, 6];
+a1;
+document.write(a1 + '<br/>');
+b1;
+document.write(b1 + '<br/>');
+c1;
+document.write(c1 + '<br/>');
+d1;
+document.write(d1 + '<br/>');
+e1;
+document.write(e1 + '<br/>');
