@@ -640,3 +640,38 @@ d1;
 document.write(d1 + '<br/>');
 e1;
 document.write(e1 + '<br/>');
+//Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+document.write("Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements <br/>");
+
+
+const [a2, b2, ...rest] = [1, 2, 3, 4, 5, 6];
+a2;
+document.write(a2 + '<br/>');
+b2;
+document.write(b2 + '<br/>');
+rest;
+document.write(rest + '<br/>');
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function removeFirstTwo(list) {
+    // Only change code below this line
+    const [a3, b3, ...arr] = list; // Change this line
+    // Only change code above this line
+    return arr;
+}
+const arr5 = removeFirstTwo(source);
+arr5;
+document.write(arr5 + '<br/>');
+//Use Destructuring Assignment with the Spread Operator to Pass an Argument Object to a Function
+document.write("Use Destructuring Assignment with the Spread Operator to Pass an Argument Object to a Function <br/>");
+
+
+const fn = ([name, age]) => ({
+    name,
+    age
+});
+fn([
+    "Gandalf",
+    56
+]);
