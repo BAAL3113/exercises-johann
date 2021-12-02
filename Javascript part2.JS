@@ -371,7 +371,7 @@ function freezeObj() {
     Object.freeze(MATH_CONSTANTS);
     // change code above this line
     try {
-        MATH_CONSTANTS.PI = 99;
+        // MATH_CONSTANTS.PI = 99;
     } catch (ex) {
         return ex;
     }
@@ -675,3 +675,144 @@ fn([
     "Gandalf",
     56
 ]);
+//Create Strings using Template Literals
+document.write("Create Strings using Template Literals <br/>");
+
+
+const person = {
+    name: "Zodiac Hasbro",
+    age: 56
+};
+
+const greeting2 = `Hello, my name is ${person.name}!
+  I am ${person.age} years old.`;
+
+greeting2;
+document.write(greeting2 + '<br/>');
+
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+};
+
+function makeList(arr) {
+    "use strict";
+    // change code below this line
+    const resultDisplayArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`);
+    }
+    // change code above this line
+    return resultDisplayArray;
+}
+const resultDisplayArray = makeList(result.failure);
+resultDisplayArray;
+document.write(resultDisplayArray + '<br/>');
+
+
+const resultDisplayArray2 = makeList(result.skipped);
+resultDisplayArray2;
+document.write(resultDisplayArray2 + '<br/>');
+
+
+const resultDisplayArray3 = makeList(result.success);
+resultDisplayArray3;
+document.write(resultDisplayArray3 + '<br/>');
+//Write Concise Object Literal Declarations Using Object Property Shorthand
+document.write("Write Concise Object Literal Declarations Using Object Property Shorthand <br/>");
+
+
+const createPerson = (name, age, gender) => ({ name, age, gender });
+createPerson("Zodiac Hasbro2", 562, "male" + "<br/>");
+
+const createPerson2 = (name, age, gender) => {
+    return { name, age, gender };
+};
+createPerson2("Zodiac Hasbro", 56, "male");
+//Write Concise Declarative Functions with ES6
+document.write("Write Concise Declarative Functions with ES6 <br/>");
+const person2 = {
+    name: "Taylor",
+    sayHello() {
+        return `Hello! My name is ${this.name}.`;
+    }
+};
+person2.sayHello();
+document.write(person2.sayHello() + '<br/>');
+
+
+const bicycle = {
+    gear: 2,
+    setGear(newGear) {
+        "use strict";
+        this.gear = newGear;
+    }
+};
+bicycle.setGear(3);
+bicycle.gear;
+document.write(bicycle.gear + '<br/>');
+//Use class Syntax to Define a Constructor Function
+document.write("Use class Syntax to Define a Constructor Function <br/>");
+class Vegetable {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const carrot = new Vegetable("carrot");
+carrot.name;
+document.write(carrot.name + '<br/>');
+//Use getters and setters to Control Access to an Object
+document.write("Use getters and setters to Control Access to an Object <br/>");
+class Thermostat {
+    constructor(fahrenheit) {
+        this._fahrenheit = fahrenheit;
+    }
+    get temperature() {
+        return 5 / 9 * (this._fahrenheit - 32);
+    }
+    set temperature(celsius) {
+        this._fahrenheit = 32 + 9 / 5 * celsius;
+    }
+}
+const thermos = new Thermostat(76);
+let temp = thermos.temperature;
+thermos.temperature = 26;
+temp;
+document.write(temp + '<br/>');
+//Use class Syntax to Define a Subclass
+document.write("Use class Syntax to Define a Subclass <br/>");
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+}
+class Dog extends Animal {
+    constructor(name) {
+        super(name);
+    }
+}
+const dog = new Dog("Hal");
+dog.name;
+document.write(dog.name + '<br/>');
+const animal = new Animal("Cat");
+animal.name;
+document.write(animal.name + '<br/>');
+//Use class Syntax to Define a Subclass
+document.write("Use class Syntax to Define a Subclass <br/>");
+class Animal2 {
+    constructor(name) {
+        this.name = name;
+    }
+}
+class Dog2 extends Animal2 {
+    constructor(name) {
+        super(name);
+    }
+}
+const dog2 = new Dog2("Hal2");
+dog2.name;
+document.write(dog2.name + '<br/>');
+const animal2 = new Animal2("Cat2");
+animal2.name;
+document.write(animal2.name + '<br/>');
