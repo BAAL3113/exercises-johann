@@ -772,7 +772,7 @@ class Thermostat {
         return 5 / 9 * (this._fahrenheit - 32);
     }
     set temperature(celsius) {
-        this._fahrenheit = 32 + 9 / 5 * celsius;
+        this._fahrenheit = celsius * 9.0 / 5 + 32;
     }
 }
 const thermos = new Thermostat(76);
@@ -780,6 +780,25 @@ let temp = thermos.temperature;
 thermos.temperature = 26;
 temp;
 document.write(temp + '<br/>');
+document.write(thermos.temperature + '<br/>');
+const thermos2 = new Thermostat(0);
+let temp2 = thermos2.temperature;
+thermos2.temperature = 0;
+temp2;
+document.write(temp2 + '<br/>');
+document.write(thermos2.temperature + '<br/>');
+const thermos3 = new Thermostat(32);
+let temp3 = thermos3.temperature;
+thermos3.temperature = 32;
+temp3;
+document.write(temp3 + '<br/>');
+document.write(thermos3.temperature + '<br/>');
+const thermos4 = new Thermostat(32);
+let temp4 = thermos4.temperature;
+thermos4.temperature = 212;
+temp4;
+document.write(temp4 + '<br/>');
+document.write(thermos4.temperature + '<br/>');
 //Use class Syntax to Define a Subclass
 document.write("Use class Syntax to Define a Subclass <br/>");
 class Animal {
@@ -816,3 +835,12 @@ document.write(dog2.name + '<br/>');
 const animal2 = new Animal2("Cat2");
 animal2.name;
 document.write(animal2.name + '<br/>');
+
+//Reuse JavaScript Code Using import and export
+document.write("Reuse JavaScript Code Using import and export <br/>");
+import { uppercaseString, lowercaseString }
+from "./JavaScript part3.js";
+uppercaseString("hello");
+document.write(uppercaseString("hello") + '<br/>');
+lowercaseString("HELLO");
+document.write(lowercaseString("HELLO") + '<br/>');
