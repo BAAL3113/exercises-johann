@@ -838,9 +838,9 @@ document.write(animal2.name + '<br/>');
 
 //Reuse JavaScript Code Using import and export
 document.write("Reuse JavaScript Code Using import and export <br/>");
-import { uppercaseString, lowercaseString }
+/*import { uppercaseString, lowercaseString }
 from "./JavaScript part3.js";
 uppercaseString("hello");
 document.write(uppercaseString("hello") + '<br/>');
 lowercaseString("HELLO");
-document.write(lowercaseString("HELLO") + '<br/>');
+document.write(lowercaseString("HELLO") + '<br/>');*/
