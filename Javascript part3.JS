@@ -20,4 +20,4 @@ const lowercaseString = (string) => {
 export { lowercaseString };
 //Reuse JavaScript Code Using import
 document.write("Reuse JavaScript Code Using import");
-/*import { add, uppercaseString, lowercaseString } from './part3.js';*/
+import { add, uppercaseString, lowercaseString } from './Javascript part3.js';
