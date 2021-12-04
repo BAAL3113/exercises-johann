@@ -306,6 +306,8 @@ cardTest(10);
 cardTest("K");
 cardTest("A");
 cardTest("Q");
+
+
 let count2 = 0;
 
 function cardTest2(card) {
