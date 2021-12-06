@@ -20,7 +20,7 @@ document.write(add2(1, 2) + '<br>');
 document.write(sqrt(4) + '<br>');
 document.write(diag(4, 5) + '<br>');*/
 //Use * to Import Everything from a File
-document.write("Use * to Import Everything from a File");
+document.write("Use * to Import Everything from a File </br>");
 /*import * as myMath from './ExerciseExportImportjs1.js';
 document.write(myMath.add(1, 2) + '<br>');
 document.write(myMath.add2(1, 2) + '<br>');
@@ -28,7 +28,7 @@ document.write(myMath.sqrt(4) + '<br>');
 document.write(myMath.diag(4, 5) + '<br>');*/
 
 //Create an Export Fallback with export default
-document.write("Create an Export Fallback with export default");
+document.write("Create an Export Fallback with export default </br>");
 
 /*export default function add(x, y) {
     return x + y;
@@ -39,23 +39,27 @@ export default function(x, y) {
 }*/
 
 //Import a Default Export
-document.write("Import a Default Export");
+document.write("Import a Default Export </br>");
 /*import add from './ExerciseExportImport2.js';
 document.write(add(1, 2) + '<br>');*/
 
 
 //Import a Named Export
-document.write("Import a Named Export");
+document.write("Import a Named Export </br>");
 /*import { add } from './ExerciseExportImport2.js';
 document.write(add(1, 2) + '<br>');*/
 
 //Create a JavaScript Promise
-document.write("Create a JavaScript Promise");
+document.write("Create a JavaScript Promise </br>");
 const myPromise = new Promise((resolve, reject) => {
     if (true) {
         resolve("Success!");
+        document.write("Success!" + '</br>');
+        document.write(resolve + '</br>');
     } else {
         reject("Failure!");
+        document.write("Failure!" + '</br>');
+        document.write(reject + '</br>');
     }
 
 });
@@ -67,33 +71,41 @@ const makeServerRequest = new Promise((resolve, reject) => {
 
     if (responseFromServer) {
         resolve("We got the data");
+        document.write("We got the data" + '</br>');
+        document.write(resolve + '</br>');
     } else {
         reject("Data not received.");
+        document.write("Data not received." + '</br>');
+        document.write(reject + '</br>');
     }
 
 });
 
 //Handle a Fulfilled Promise with then
-document.write("Handle a Fulfilled Promise with then");
+document.write("Handle a Fulfilled Promise with then </br>");
 makeServerRequest.then(result => {
     document.write(result);
 });
 
 
 //Handle a Rejected Promise with catch
-document.write("Handle a Rejected Promise with catch");
+document.write("Handle a Rejected Promise with catch </br>");
 makeServerRequest.catch(error => {
     document.write(error);
 });
 
 
 //Create a JavaScript Promise with a Custom Promise Handler
-document.write("Create a JavaScript Promise with a Custom Promise Handler");
+document.write("Create a JavaScript Promise with a Custom Promise Handler </br>");
 const myPromise2 = new Promise((resolve, reject) => {
     if (true) {
         resolve("Success!");
+        document.write("Success!" + '</br>');
+        document.write(resolve + '</br>');
     } else {
         reject("Failure!");
+        document.write("Failure!" + '</br>');
+        document.write(reject + '</br>');
     }
 
 }); //end of myPromise2
