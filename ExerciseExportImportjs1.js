@@ -35,23 +35,37 @@ document.write("Using the Test Method </br>");
 let testStr = "freeCodeCamp";
 let testRegex = /Code/;
 testRegex.test(testStr);
-document.write(testRegex.test(testStr) + '</br>');
+//document.write(testRegex.test(testStr) + '</br>');
 
 //Match a Literal String with Different Possibilities
 document.write("Match a Literal String with Different Possibilities </br>");
 let petString = "James has a pet cat.";
-let petRegex = /dog|cat|bird|fish/; // Change this line
-let result = petRegex.test(petString);
-document.write(result + '</br>');
+let petRegex = /dog|cat|bird|fish/;
+let testresult = petRegex.test(petString);
+//document.write(testresult + '</br>');
 
 //Ignore Case While Matching
 document.write("Ignore Case While Matching </br>");
 let myString = "freeCodeCamp";
-let fccRegex = /freecodecamp/i; // Change this line
-let result = fccRegex.test(myString);
-document.write(result + '</br>');
+let fccRegex = /freecodecamp/i;
+let testiresult = fccRegex.test(myString);
+//document.write(testiresult + '</br>');
 
 
+//Extract Matches
+document.write("Extract Matches </br>");
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/;
+let matchresult = extractStr.match(codingRegex);
+document.write(matchresult + '</br>');
+
+
+//Find More Than the First Match
+document.write("Find More Than the First Match </br>");
+let twostr = "Repeat, Repeat, Repeat";
+let tworegex = /Repeat/g;
+let tworesult = twostr.match(tworegex);
+document.write(tworesult + '</br>');
 
 //Using the Replace Method
 document.write("Using the Replace Method </br>");
@@ -90,60 +104,60 @@ document.write(str3 + '</br>');
 
 
 //Using the Includes Method
-document.write("Using the Includes Method </br>");
+/*document.write("Using the Includes Method </br>");
 let incstr = "freeCodeCamp";
 let incresult = incstr.includes("Code");
-document.write(incresult + '</br>');
+document.write(incresult + '</br>');*/
 
 
 //Using the StartsWith Method
-document.write("Using the StartsWith Method </br>");
+/*document.write("Using the StartsWith Method </br>");
 let stwstr = "freeCodeCamp";
 let stwresult = stwstr.startsWith("free");
-document.write(stwresult + '</br>');
+document.write(stwresult + '</br>');*/
 
 
 //Using the EndsWith Method
-document.write("Using the EndsWith Method </br>");
+/*document.write("Using the EndsWith Method </br>");
 let enwstr = "freeCodeCamp";
 let enwresult = enwstr.endsWith("Camp");
-document.write(enwresult + '</br>');
+document.write(enwresult + '</br>');*/
 
 
 //Using the Repeat Method
-document.write("Using the Repeat Method </br>");
+/*document.write("Using the Repeat Method </br>");
 let repstr = "freeCodeCamp";
 let represult = repstr.repeat(2);
-document.write(represult + '</br>');
+document.write(represult + '</br>');*/
 
 
 //Using the PadStart Method
-document.write("Using the PadStart Method </br>");
+/*document.write("Using the PadStart Method </br>");
 let padsstr = "freeCodeCamp";
 let padsresult = padsstr.padStart(10);
-document.write(padsresult + '</br>');
+document.write(padsresult + '</br>');*/
 
 
 //Using the PadEnd Method
-document.write("Using the PadEnd Method </br>");
+/*document.write("Using the PadEnd Method </br>");
 let padestr = "freeCodeCamp";
 let paderesult = padestr.padEnd(10);
-document.write(paderesult + '</br>');
+document.write(paderesult + '</br>');*/
 
 
 //Using the Trim Method
-document.write("Using the Trim Method </br>");
+/*document.write("Using the Trim Method </br>");
 let trstr = "       freeCodeCamp       ";
 let trresult = trstr.trim();
-document.write(trresult + '</br>');
+document.write(trresult + '</br>');*/
 
 
 //Using the Template Literals
-document.write("Using the Template Literals </br>");
+/*document.write("Using the Template Literals </br>");
 let name = "freeCodeCamp";
 let course = "Bootcamp";
 let template = `${name} is taking ${course}`;
-document.write(template + '</br>');
+document.write(template + '</br>');*/
 
 
 //Using the Escape Sequences
