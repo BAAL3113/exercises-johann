@@ -37,6 +37,21 @@ let testRegex = /Code/;
 testRegex.test(testStr);
 document.write(testRegex.test(testStr) + '</br>');
 
+//Match a Literal String with Different Possibilities
+document.write("Match a Literal String with Different Possibilities </br>");
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Change this line
+let result = petRegex.test(petString);
+document.write(result + '</br>');
+
+//Ignore Case While Matching
+document.write("Ignore Case While Matching </br>");
+let myString = "freeCodeCamp";
+let fccRegex = /freecodecamp/i; // Change this line
+let result = fccRegex.test(myString);
+document.write(result + '</br>');
+
+
 
 //Using the Replace Method
 document.write("Using the Replace Method </br>");
