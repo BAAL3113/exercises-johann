@@ -67,6 +67,12 @@ let tworegex = /Repeat/g;
 let tworesult = twostr.match(tworegex);
 document.write(tworesult + '</br>');
 
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi;
+let twinkleresult = twinkleStar.match(starRegex);
+document.write(twinkleresult + '</br>');
+
+
 //Using the Replace Method
 document.write("Using the Replace Method </br>");
 let repstr = "freeCodeCamp";
