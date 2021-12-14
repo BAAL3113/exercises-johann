@@ -23,7 +23,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:\\Users\\JOHANN\\Documents\\GitHub\\exercises-johann\\ExerciseExportImportjs1.html",
+            "url": "C:\\Users\\JOHANN\\Documents\\GitHub\\exercises-johann\\Exercises.HTML",
             "webRoot": "${workspaceFolder}"
         }
 
