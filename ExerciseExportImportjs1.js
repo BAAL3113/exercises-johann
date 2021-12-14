@@ -163,6 +163,12 @@ let nonresult = quoteSample2.match(nonRegex);
 document.write(nonresult + '</br>');
 
 
+let quoteSampleV3 = "3 blind mice.";
+let nonRegex2 = /[^aeiou0-9]/ig;
+let nonresult2 = quoteSampleV3.match(nonRegex2);
+document.write(nonresult2 + '</br>');
+
+
 //Match Characters that Occur One or More Times
 document.write("Match Characters that Occur One or More Times </br>");
 let difficultSpelling = "Mississippi";
@@ -185,6 +191,11 @@ let haiku = "May the force be with you.";
 let haikuRegex = /.{3,}/g;
 let haikuResult = haiku.match(haikuRegex);
 document.write(haikuResult + '</br>');
+
+let text = "<h1>Winter is coming</h1>";
+let myRegex4 = /<.*?>/;
+let textresult = text.match(myRegex4);
+document.write(textresult + '</br>');
 
 
 //Match Beginning String Patterns
