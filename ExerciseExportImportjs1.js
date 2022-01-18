@@ -192,18 +192,58 @@ let haikuRegex = /.{3,}/g;
 let haikuResult = haiku.match(haikuRegex);
 document.write(haikuResult + '</br>');
 
+
+//this code makes the rest of the page bold font
 let text = "<h1>Winter is coming</h1>";
 let myRegex4 = /<.*?>/;
 let textresult = text.match(myRegex4);
 document.write(textresult + '</br>');
 
-
+//this code makes the content of this code bold font
 //Match Characters that Occur One or More Times with Lazy Matching
 document.write("Match Characters that Occur One or More Times with Lazy Matching </br>");
 let text2 = "<h1>Winter is coming</h1>";
 let myRegex5 = /<.*?>/g;
 let textresult2 = text2.match(myRegex5);
 document.write(textresult2 + '</br>');
+
+
+let xa = "<h1>";
+let xe = /<.*?>/;
+xeresult = xa.match(xe);
+document.write(xeresult);
+
+document.write("this line should be bold </br>");
+
+let xa2 = "</h1>";
+let xe2 = /<.*?>/g;
+xeresult2 = xa2.match(xe2);
+document.write(xeresult2);
+
+
+let xa3 = "<h2>";
+let xe3 = /<.*?>/;
+xeresult3 = xa3.match(xe3);
+document.write(xeresult3);
+
+document.write("this line should be bold </br>");
+
+let xa4 = "</h2>";
+let xe4 = /<.*?>/g;
+xeresult4 = xa4.match(xe4);
+document.write(xeresult4);
+
+
+
+//let xe3 = /<.*?>/g;
+
+
+let text3 = "this line should be bold </br>";
+let Ja = /t.*?old/;
+let textresult3 = text3.match(Ja);
+document.write(textresult3 + '</br>');
+
+
 
 
 //Match Beginning String Patterns
