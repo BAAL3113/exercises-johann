@@ -198,6 +198,14 @@ let textresult = text.match(myRegex4);
 document.write(textresult + '</br>');
 
 
+//Match Characters that Occur One or More Times with Lazy Matching
+document.write("Match Characters that Occur One or More Times with Lazy Matching </br>");
+let text2 = "<h1>Winter is coming</h1>";
+let myRegex5 = /<.*?>/g;
+let textresult2 = text2.match(myRegex5);
+document.write(textresult2 + '</br>');
+
+
 //Match Beginning String Patterns
 document.write("Match Beginning String Patterns </br>");
 let rickyAndCal = "Cal and Ricky both like racing.";
