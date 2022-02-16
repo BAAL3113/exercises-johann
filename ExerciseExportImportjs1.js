@@ -294,6 +294,15 @@ let numresult3 = numStr3.match(numRegex3);
 document.write(numresult3 + '</br>');
 
 
+//Restrict Possible Usernames
+document.write("Restrict Possible Usernames </br>");
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z]([0-9]|[a-z]){2,7}$/i;
+let userresult = userCheck.test(username);
+document.write(userresult + '</br>');
+
+
+
 //Match All White-Space Characters
 document.write("Match All White-Space Characters </br>");
 let whiteSpace = "Whitespace. Whitespace everywhere!";
