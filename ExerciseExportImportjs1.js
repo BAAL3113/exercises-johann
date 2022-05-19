@@ -234,8 +234,14 @@ xeresult4 = xa4.match(xe4);
 document.write(xeresult4);
 
 
+//Restrict Possible Usernames
+document.write("Restrict Possible Usernames </br>");
+let username2 = "JackOfAllTrades";
+let userCheck2 = /^[a-z]{2,}\d*$/i;
+let userresult2 = userCheck2.test(username2);
+document.write(userresult2 + '</br>');
 
-//let xe3 = /<.*?>/g;
+
 
 
 let text3 = "this line should be bold </br>";
