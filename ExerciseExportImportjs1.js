@@ -323,6 +323,56 @@ let whiteSpace2 = "Whitespace. Whitespace everywhere!";
 let whiteSpaceRegex2 = /\S/g;
 let whitespaceresult2 = whiteSpace2.match(whiteSpaceRegex2);
 document.write(whitespaceresult2 + '</br>');
+let whitespaceresult3 = whiteSpace2.match(whiteSpaceRegex2).length;
+document.write(whitespaceresult3 + '</br>');
+
+
+//Specify Upper and Lower Number of Matches
+document.write("Specify Upper and Lower Number of Matches </br>");
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6} no/;
+let ohresult = ohRegex.test(ohStr);
+document.write(ohresult + '</br>');
+
+
+//Specify Only the Lower Number of Matches
+document.write("Specify Only the Lower Number of Matches </br>");
+let ohStr2 = "Ohhh no";
+let ohRegex2 = /Oh{3,} no/;
+let ohresult2 = ohRegex2.test(ohStr2);
+document.write(ohresult2 + '</br>');
+
+
+//Specify Exact Number of Matches
+document.write("Specify Exact Number of Matches </br>");
+let ohStr3 = "Ohhh no";
+let ohRegex3 = /Oh{4} no/;
+let ohresult3 = ohRegex3.test(ohStr3);
+document.write(ohresult3 + '</br>');
+
+
+//Check for All or None
+document.write("Check for All or None </br>");
+let american = "color";
+let british = "colour";
+let rainbowRegex = /colou?r/;
+let americanresult = american.match(rainbowRegex);
+let britishresult = british.match(rainbowRegex);
+document.write(americanresult + '</br>');
+document.write(britishresult + '</br>');
+
+
+//Positive and Negative Lookahead
+document.write("Positive and Negative Lookahead </br>");
+let quit = "qu";
+let noquit = "qt";
+let quRegex = /q(?=u)/;
+let qregex = /q(?!u)/;
+let quitresult = quit.match(quRegex);
+let noquitresult = noquit.match(quRegex);
+document.write(quitresult + '</br>');
+document.write(noquitresult + '</br>');
+
 
 
 //Match All Word Characters
