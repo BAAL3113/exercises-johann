@@ -369,9 +369,56 @@ let noquit = "qt";
 let quRegex = /q(?=u)/;
 let qregex = /q(?!u)/;
 let quitresult = quit.match(quRegex);
-let noquitresult = noquit.match(quRegex);
+let noquitresult = noquit.match(qregex);
 document.write(quitresult + '</br>');
 document.write(noquitresult + '</br>');
+
+
+let password = "abc123";
+let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+let checkPassresult = checkPass.test(password);
+document.write(checkPassresult + '</br>');
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{5,})(?=\D*\d{2})/; // Cambia esta línea
+let result = pwRegex.test(sampleWord);
+document.write(result + '</br>');
+
+
+let sampleWord2 = "astronaut";
+let pwRegex2 = /(?=\w{6})(?=\w*\d{2})/; // Cambia esta línea
+let result2 = pwRegex2.test(sampleWord2);
+document.write(result2 + '</br>');
+
+
+//Using Lookaheads to Match Beginning of String
+document.write("Using Lookaheads to Match Beginning of String </br>");
+let sampleWord3 = "astronaut";
+let pwRegex3 = /(?=\w{5,})(?=\D*\d{2})/; // Cambia esta línea
+let result3 = pwRegex3.test(sampleWord3);
+document.write(result3 + '</br>');
+
+
+//Using Lookaheads to Match Ending of String
+document.write("Using Lookaheads to Match Ending of String </br>");
+let sampleWord4 = "astronaut";
+let pwRegex4 = /(?=\w{5,})(?=\D*\d{2})/; // Cambia esta línea
+let result4 = pwRegex4.test(sampleWord4);
+document.write(result4 + '</br>');
+
+
+
+//Positive and Negative Lookbehind
+document.write("Positive and Negative Lookbehind </br>");
+let quit2 = "qu";
+let noquit2 = "qt";
+let quRegex2 = /q(?<=u)/;
+let qregex2 = /q(?<!u)/;
+let quitresult2 = quit2.match(quRegex2);
+let noquitresult2 = noquit2.match(qregex2);
+document.write(quitresult2 + '</br>');
+document.write(noquitresult2 + '</br>');
+
 
 
 
