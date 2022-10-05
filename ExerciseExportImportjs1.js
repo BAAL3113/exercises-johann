@@ -421,6 +421,14 @@ document.write(noquitresult2 + '</br>');
 
 
 
+//Check For Mixed Grouping of Characters
+document.write("Check For Mixed Grouping of Characters </br>");
+let miString = "Eleanor Roosevelt";
+let miRegex = /(Franklin |Eleanor )Roosevelt/;
+let miResult = miRegex.test(miString);
+document.write(miString + '</br>');
+document.write(miResult + '</br>');
+
 
 //Match All Word Characters
 document.write("Match All Word Characters </br>");
