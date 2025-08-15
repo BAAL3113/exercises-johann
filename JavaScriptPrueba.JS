@@ -1,82 +1,82 @@
 //document presentation of JavaScript
-document.write("This is Javascript <br/>");
+console.log("This is Javascript");
 //declaration of variables with var, assigning text
 var question = "Question, " + "Answer me please!";
 var answer = "Answer";
 var correct = "Correct";
 var incorrect = "Incorrect";
 //printing variables
-document.write(question, "<br/>", answer, "<br/>", correct, "<br/>", incorrect, "<br/>");
+console.log(question, answer, correct, incorrect);
 //declaration of variables with let, assigning text
 let a = 1;
 let b = 2;
 let c = a + b;
 //printing variables on screen
-document.write(c + "<br/><br/>");
-document.write(question + " Yes of course, tell me.<br/>");
-document.write("Did you take my cellphone? " + answer + "!<br/>");
-document.write(correct + "<br/>");
-document.write(`Oh I thought I was ${incorrect}<br/>`);
+console.log(c);
+console.log(question + " Yes of course, tell me.");
+console.log("Did you take my cellphone? " + answer + "!");
+console.log(correct);
+console.log(`Oh I thought I was ${incorrect}`);
 c += c;
-document.write(c + '<br/>');
+console.log(c);
 c *= b;
-document.write(c + '<br/>');
-document.write("My name is Johann".length + '<br/>');
-document.write("My name is Johann".toUpperCase() + '<br/>');
+console.log(c);
+console.log("My name is Johann".length);
+console.log("My name is Johann".toUpperCase());
 //using arrays
 let Name = "Johann";
 let FirstLetter = "";
 FirstLetter = Name[0];
-document.write(FirstLetter + '<br/>');
+console.log(FirstLetter);
 let Array = [1, 2, 3];
-document.write(Array[0] + '<br/>');
+console.log(Array[0]);
 let SecondDigit = Array[1];
-document.write(SecondDigit + '<br/>');
+console.log(SecondDigit);
 Array.push(4);
-document.write(Array + '<br/>');
+console.log(Array);
 const oneDown = Array.pop();
-document.write(oneDown + '<br/>');
-document.write(Array + '<br/>');
+console.log(oneDown);
+console.log(Array);
 const firstDown = Array.shift();
-document.write(firstDown + '<br/>');
-document.write(Array + '<br/>');
+console.log(firstDown);
+console.log(Array);
 const firstInsert = Array.unshift(3);
-document.write(firstInsert + '<br/>');
-document.write(Array + '<br/>');
+console.log(firstInsert);
+console.log(Array);
 Array.unshift(["Johann", "Michele", "Goku"]);
-document.write(Array + '<br/>');
+console.log(Array);
 //usings functions
 function sentence() {
-    document.write("Hello World! <br/>");
+    console.log("Hello World!");
 }
 sentence();
 
 function expression(a, b) {
-    document.write(a + b + '<br/>');
+    console.log(a + b);
 }
 expression("fuck", "you");
 
 function sum(num) {
     return num + 6;
 }
-document.write(sum(4) + '<br/>');
+console.log(sum(4));
 global = 5;
-document.write(global + '<br/>');
+console.log(global);
 
 function nextInLine(arr, item) {
     arr.push(item);
     return arr.shift(item);
 }
 const testArr = [1, 2, 3, 4, 5];
-document.write("Before: " + JSON.stringify(testArr) + '<br/>');
-document.write(nextInLine(testArr, 6) + '<br/>');
-document.write("After: " + JSON.stringify(testArr) + '<br/>');
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
 
 function trueOrFalse(wasThatTrue) {
     if (wasThatTrue == true) {
-        return document.write("Yes, that was true <br/>");
+        return console.log("Yes, that was true");
     } else {
-        return document.write("No, that was false <br/>");
+        return console.log("No, that was false");
     }
 }
 trueOrFalse(true);
@@ -84,9 +84,9 @@ trueOrFalse(false);
 //using If Else and equality, diferrence, greater than, less than, greater than or equal to, less than or equal to
 function testEqual(val) {
     if (val == 12) {
-        return document.write("Equal <br/>");
+        return console.log("Equal");
     } else {
-        return document.write("Not Equal <br/>");
+        return console.log("Not Equal");
     }
 }
 testEqual("12");
@@ -94,9 +94,9 @@ testEqual(12);
 
 function testEqual2(val) {
     if (val === 12) {
-        return document.write("Equal <br/>");
+        return console.log("Equal");
     } else {
-        return document.write("Not Equal <br/>");
+        return console.log("Not Equal");
     }
 }
 testEqual2("12");
@@ -104,9 +104,9 @@ testEqual2(12);
 
 function testNotEqual(val) {
     if (val != 12) {
-        return document.write("Not Equal <br/>");
+        return console.log("Not Equal");
     } else {
-        return document.write("Equal <br/>");
+        return console.log("Equal");
     }
 }
 testNotEqual(12);
@@ -114,9 +114,9 @@ testNotEqual("12");
 
 function testNotEqual2(val) {
     if (val !== 12) {
-        return document.write("Not Equal <br/>");
+        return console.log("Not Equal");
     } else {
-        return document.write("Equal <br/>");
+        return console.log("Equal");
     }
 }
 testNotEqual2(12);
@@ -127,19 +127,19 @@ const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey"
 
 function golfScore(par, strokes) {
     if (strokes == 1) {
-        return document.write(names[0] + '<br/>');
+        return console.log(names[0]);
     } else if (strokes <= par - 2) {
-        return document.write(names[1] + '<br/>');
+        return console.log(names[1]);
     } else if (strokes == par - 1) {
-        return document.write(names[2] + '<br/>');
+        return console.log(names[2]);
     } else if (strokes == par) {
-        return document.write(names[3] + '<br/>');
+        return console.log(names[3]);
     } else if (strokes == par + 1) {
-        return document.write(names[4] + '<br/>');
+        return console.log(names[4]);
     } else if (strokes == par + 2) {
-        return document.write(names[5] + '<br/>');
+        return console.log(names[5]);
     } else {
-        return document.write(names[6] + '<br/>');
+        return console.log(names[6]);
     }
 }
 golfScore(4, 1);
@@ -167,7 +167,7 @@ function caseInSwitch(val) {
             answer = "delta";
             break;
     }
-    return document.write(answer + '<br/>');
+    return console.log(answer);
 }
 caseInSwitch(1);
 caseInSwitch(2);
@@ -191,7 +191,7 @@ function switchOfStuff(val) {
             answer = "stuff";
             break;
     }
-    return document.write(answer + '<br/>');
+    return console.log(answer);
 }
 switchOfStuff("a");
 switchOfStuff("b");
@@ -218,7 +218,7 @@ function sequentialSizes(val) {
             answer = "High";
             break;
     }
-    return document.write(answer + '<br/>');
+    return console.log(answer);
 }
 sequentialSizes(1);
 sequentialSizes(2);
@@ -247,7 +247,7 @@ function chainToSwitch(val) {
             answer = "Does not compute";
             break;
     }
-    return document.write(answer + '<br/>');
+    return console.log(answer);
 }
 chainToSwitch("bob");
 chainToSwitch("sally");
@@ -257,9 +257,9 @@ let testConsole = "testConsole";
 //example of or || and Math.min
 function abTest(a, b) {
     if (a < 0 || b < 0) {
-        return document.write("Please enter positive numbers <br/>");
+        return console.log("Please enter positive numbers");
     }
-    return document.write(Math.min(a, b) + '<br/>');
+    return console.log(Math.min(a, b));
 }
 abTest(2, 5);
 abTest(-5, 5);
@@ -270,7 +270,7 @@ function abTest2(a, b) {
     if (a < 0 || b < 0) {
         return undefined;
     }
-    return document.write(Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2)) + '<br/>');
+    return console.log(Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2)));
 }
 abTest2(2, 5);
 abTest2(2, 2);
@@ -294,9 +294,9 @@ function cardTest(card) {
             break;
     }
     if (count > 0) {
-        return document.write(count + " Yes, you win! <br/>");
+        return console.log(count + " Yes, you win!");
     } else {
-        return document.write(count + " No, you lose! <br/>");
+        return console.log(count + " No, you lose!");
     }
 }
 cardTest(2);
@@ -314,13 +314,13 @@ function cardTest2(card) {
     switch (card) {
         case 2 || 3 || 4 || 5 || 6:
             count++;
-            return document.write("5 Bet </br>");
+            return console.log("5 Bet");
             break;
         case 7 || 8 || 9:
-            return document.write("0 Hold </br>");
+            return console.log("0 Hold");
         case 10 || "J" || "Q" || "K" || "A":
             count--;
-            return document.write("-5 Hold </br>");
+            return console.log("-5 Hold");
             break;
     }
 }
@@ -341,9 +341,9 @@ const testObj = {
 const hatValue = testObj.hat;
 const shirtValue = testObj.shirt;
 const shoesValue = testObj.shoes;
-document.write(hatValue + '<br/>');
-document.write(shirtValue + '<br/>');
-document.write(shoesValue + '<br/>');
+console.log(hatValue);
+console.log(shirtValue);
+console.log(shoesValue);
 const testObj2 = {
     "an entree": "hamburger",
     "my side": "veggies",
@@ -352,8 +352,8 @@ const testObj2 = {
 //assigning a value to a variable, using bracket notation
 const entreeValue = testObj2["an entree"];
 const drinkValue = testObj2["the drink"];
-document.write(entreeValue + '<br/>');
-document.write(drinkValue + '<br/>');
+console.log(entreeValue);
+console.log(drinkValue);
 const testObj3 = {
     face: "glasses",
     head: 1,
@@ -362,9 +362,9 @@ const testObj3 = {
 const faceValue = testObj3.face;
 const headValue = testObj3.head;
 const fingerValue = testObj3["how many fingers"];
-document.write(faceValue + '<br/>');
-document.write(headValue + '<br/>');
-document.write(fingerValue + '<br/>');
+console.log(faceValue);
+console.log(headValue);
+console.log(fingerValue);
 const dogs = {
     Fido: "Mutt",
     Hunter: "Doberman",
@@ -372,7 +372,7 @@ const dogs = {
 };
 const myDog = "Hunter";
 const myBreed = dogs[myDog];
-document.write(myBreed + '<br/>');
+console.log(myBreed);
 const someObj = {
     propName: "John"
 };
@@ -382,15 +382,15 @@ function propPrefix(str) {
     return s + str;
 }
 const someProp = propPrefix("Name");
-document.write(someObj[someProp] + '<br/>');
+console.log(someObj[someProp]);
 someObj[someProp] = "Peter";
-document.write(someObj[someProp] + '<br/>');
+console.log(someObj[someProp]);
 delete testObj2["my side"];
 let property;
 property = testObj2.hasOwnProperty("my side");
-document.write(property + '<br/>');
+console.log(property);
 property = testObj2.hasOwnProperty("an entree");
-document.write(property + '<br/>');
+console.log(property);
 
 function phoneticLookup(val) {
     let result = "";
@@ -403,16 +403,16 @@ function phoneticLookup(val) {
         foxtrot: "Frank"
     };
     result = lookup[val];
-    return document.write(result + '<br/>');
+    return console.log(result);
 }
 phoneticLookup("charlie");
 phoneticLookup("bravo");
 //using hasOwnProperty
 function checkObj(obj, checkProp) {
     if (obj.hasOwnProperty(checkProp)) {
-        return document.write(obj[checkProp] + '<br/>');
+        return console.log(obj[checkProp]);
     } else {
-        return document.write("Not Found <br/>");
+        return console.log("Not Found");
     }
 }
 checkObj(testObj3, "face");
@@ -467,9 +467,9 @@ const myStorage = {
 
 let gloveBoxContents = undefined;
 gloveBoxContents = myStorage.car.inside["glove box"];
-document.write(gloveBoxContents + '<br/>');
-document.write(myStorage.car.inside["glove box"] + '<br/>');
-document.write(myStorage.car.outside["trunk"] + '<br/>');
+console.log(gloveBoxContents);
+console.log(myStorage.car.inside["glove box"]);
+console.log(myStorage.car.outside["trunk"]);
 const myPlants = [{
         type: "flowers",
         list: [
@@ -490,7 +490,7 @@ const myPlants = [{
 
 let secondTree = "";
 secondTree = myPlants[1].list[1];
-document.write(secondTree + '<br/>');
+console.log(secondTree);
 
 var recordCollection = {
     2548: {
@@ -531,7 +531,4 @@ updateRecords(recordCollection, 5439, "artist", "ABBA");
 updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
 updateRecords(recordCollection, 2548, "tracks", "Addicted to Love");
 updateRecords(recordCollection, 1245, "tracks", "You Give Love a Bad Name");
-document.write(recordCollection[2548]["tracks"] + '<br/>');
-document.write(recordCollection[2548]["artist"] + '<br/>');
-document.write(recordCollection[5439]["tracks"] + '<br/>');
-document.write(recordCollection[5439]["artist"] + '<br/>');
+console.log(recordCollection[2548]["tracks"]);
